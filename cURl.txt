@@ -1,0 +1,30 @@
+cURL:
+
+link:https://www.youtube.com/watch?v=7XUibDYw4mc&ab_channel=TraversyMedia
+
+-curl is a command line tool to transfer data to or from a server.
+-It is a tool used for particularly testing api's.
+
+To get the header:
+	 curl --head https://jsonplaceholder.typicode.com/post/3
+	curl --I https://jsonplaceholder.typicode.com/post/3
+		
+
+Creating a file:
+	curl -o test.txt https://jsonplaceholder.typicode.com/post
+
+Downloading a image:
+	curl -O https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg
+
+Response:
+	curl --data "title=Hello&body=Hello World" https://jsonplaceholder.typicode.com/posts
+
+update:
+	curl -X PUT -d "title=Hello" https://jsonplaceholder.typicode.com/posts/3
+
+delete
+	curl -X DELETE "title=Hello" https://jsonplaceholder.typicode.com/posts/3
+
+
+to upload to the server(filezilla)
+	curl -u @mail.com:password -T filename ftp://ftp.websitename.com  
